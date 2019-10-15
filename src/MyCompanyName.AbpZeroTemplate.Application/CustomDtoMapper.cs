@@ -25,6 +25,8 @@ using MyCompanyName.AbpZeroTemplate.Editions.Dto;
 using MyCompanyName.AbpZeroTemplate.Friendships;
 using MyCompanyName.AbpZeroTemplate.Friendships.Cache;
 using MyCompanyName.AbpZeroTemplate.Friendships.Dto;
+using MyCompanyName.AbpZeroTemplate.HiddenFunction;
+using MyCompanyName.AbpZeroTemplate.HiddenFunction.Dto;
 using MyCompanyName.AbpZeroTemplate.Localization.Dto;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy.Dto;
@@ -132,6 +134,9 @@ namespace MyCompanyName.AbpZeroTemplate
             configuration.CreateMap<OrganizationUnit, OrganizationUnitDto>();
 
             /* ADD YOUR OWN CUSTOM AUTOMAPPER MAPPINGS HERE */
+            //HFunc
+            configuration.CreateMap<HiddenFunc, HFuncListDto>();
+            configuration.CreateMap<Product, ProductInHFuncListDto>();
         }
     }
 }
